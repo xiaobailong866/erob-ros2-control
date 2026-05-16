@@ -1,0 +1,39 @@
+# Colcon / ROS 2 build artifacts
+build/
+install/
+log/
+.colcon/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+
+# CMake / compiled outputs
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+*.so
+*.o
+*.a
+
+# Runtime outputs
+trajectory_error_analysis.csv
+*.bag
+*.db3
+*.mcap
+
+# Editor and local agent settings
+.vscode/
+.idea/
+.claude/
+.codex/
+.agents/
+.marscode/
+
+# OS files
+.DS_Store
+Thumbs.db

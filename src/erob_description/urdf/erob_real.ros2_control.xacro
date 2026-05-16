@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:macro name="erob_real_ros2_control" params="name">
+    <ros2_control name="${name}" type="system">
+      <hardware>
+        <plugin>erob_hardware/ErobHardwareInterface</plugin>
+      </hardware>
+      <joint name="L_Joint_1">
+        <command_interface name="position" />
+        <state_interface name="position" />
+      </joint>
+      <joint name="L_Joint_2">
+        <command_interface name="position" />
+        <state_interface name="position" />
+      </joint>
+      <joint name="L_Joint_3">
+        <command_interface name="position" />
+        <state_interface name="position" />
+      </joint>
+      <joint name="L_Joint_4">
+        <command_interface name="position" />
+        <state_interface name="position" />
+      </joint>
+      <joint name="L_Joint_5">
+        <command_interface name="position" />
+        <state_interface name="position" />
+      </joint>
+      <joint name="L_Joint_6">
+        <command_interface name="position" />
+        <state_interface name="position" />
+      </joint>
+      <joint name="L_Joint_7">
+        <command_interface name="position" />
+        <state_interface name="position" />
+      </joint>
+    </ros2_control>
+  </xacro:macro>
+</robot>

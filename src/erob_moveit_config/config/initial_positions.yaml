@@ -1,0 +1,19 @@
+# Default initial positions for shu_pr03's ros2_control fake system
+
+initial_positions:
+  L_Joint_1: 0
+  L_Joint_2: 0
+  L_Joint_3: 0
+  L_Joint_4: 0
+  L_Joint_5: 0
+  L_Joint_6: 0
+  L_Joint_7: 0
+  R_Joint_1: 0
+  R_Joint_2: 0
+  R_Joint_3: 0
+  R_Joint_4: 0
+  R_Joint_5: 0
+  R_Joint_6: 0
+  R_Joint_7: 0
+  head_joint: 0
+  neck_joint: 0

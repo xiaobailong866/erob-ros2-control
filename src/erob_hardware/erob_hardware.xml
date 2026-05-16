@@ -1,0 +1,9 @@
+<library path="erob_hardware">
+  <class name="erob_hardware/ErobHardwareInterface"
+         type="erob_hardware::ErobHardwareInterface"
+         base_class_type="hardware_interface::SystemInterface">
+    <description>
+      The EtherCAT Hardware Interface for the 7-DOF Tomato Robot.
+    </description>
+  </class>
+</library>

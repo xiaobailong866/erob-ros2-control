@@ -1,0 +1,27 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 1000 # 极度关键：匹配你底层 EtherCAT 的 1000Hz 刷新率！
+    
+    #关节状态广播器joint_state_broadcaster
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+    
+    #关节轨迹控制器left_arm_controller
+    left_arm_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+left_arm_controller:
+  ros__parameters:
+    joints:
+      - L_Joint_1
+      - L_Joint_2
+      - L_Joint_3
+      - L_Joint_4
+      - L_Joint_5
+      - L_Joint_6
+      - L_Joint_7
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+

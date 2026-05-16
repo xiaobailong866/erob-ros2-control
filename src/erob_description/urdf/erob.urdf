@@ -1,0 +1,975 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="shu_pr03">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.000142803043263029 0.00257226900961791 -0.253491641440473"
+        rpy="0 0 0" />
+      <mass
+        value="3.81243011908748" />
+      <inertia
+        ixx="0.0367037993908777"
+        ixy="-3.00717250100034E-05"
+        ixz="8.04545647630551E-07"
+        iyy="0.0335739186517586"
+        iyz="-1.07903733887167E-05"
+        izz="0.0242460999448266" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://erob_description/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://erob_description/meshes/base_link_low.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="L_shoulder_1">
+    <inertial>
+      <origin
+        xyz="-0.0316495841873101 0.0876970351324887 1.03954945596119E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.0583662127067442" />
+      <inertia
+        ixx="8.70454107176563E-05"
+        ixy="-4.49418533441545E-07"
+        ixz="1.30502333237381E-11"
+        iyy="5.83722225921585E-05"
+        iyz="9.05520067421455E-11"
+        izz="3.91504682187357E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://erob_description/meshes/L_shoulder_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://erob_description/meshes/L_shoulder_1_low.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L_Joint_1"
+    type="revolute">
+    <origin
+      xyz="0 0.12125 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="L_shoulder_1" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="10"
+      velocity="1" />
+  </joint>
+  <link
+    name="L_shoulder_2">
+    <inertial>
+      <origin
+        xyz="-0.000806846308950948 7.19790532838216E-06 -0.0541256547821431"
+        rpy="0 0 0" />
+      <mass
+        value="0.354884998531738" />
+      <inertia
+        ixx="0.000926057022235404"
+        ixy="9.38158254254901E-09"
+        ixz="-0.000203502930755037"
+        iyy="0.00101553381091218"
+        iyz="1.50040428638811E-08"
+        izz="0.00072160188389543" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://erob_description/meshes/L_shoulder_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://erob_description/meshes/L_shoulder_2_low.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L_Joint_2"
+    type="revolute">
+    <origin
+      xyz="0 0.07875 0"
+      rpy="1.5708 0 0" />
+    <parent
+      link="L_shoulder_1" />
+    <child
+      link="L_shoulder_2" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="10"
+      velocity="1" />
+  </joint>
+  <link
+    name="L_shoulder_3">
+    <inertial>
+      <origin
+        xyz="-0.028173948373643 3.12268663857362E-07 -0.120975211869893"
+        rpy="0 0 0" />
+      <mass
+        value="0.0451397306440301" />
+      <inertia
+        ixx="5.44670832775202E-05"
+        ixy="4.04285673310756E-11"
+        ixz="-2.38081150868617E-08"
+        iyy="2.57895714674165E-05"
+        iyz="-2.1284511486762E-10"
+        izz="3.62117382012054E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://erob_description/meshes/L_shoulder_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://erob_description/meshes/L_shoulder_3_low.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L_Joint_3"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.14525"
+      rpy="0 0 0" />
+    <parent
+      link="L_shoulder_2" />
+    <child
+      link="L_shoulder_3" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="10"
+      velocity="1" />
+  </joint>
+  <link
+    name="L_elbow">
+    <inertial>
+      <origin
+        xyz="0.00255124883417135 5.18567959731375E-06 -0.0523161872028072"
+        rpy="0 0 0" />
+      <mass
+        value="0.275804426908576" />
+      <inertia
+        ixx="0.000592384378540585"
+        ixy="3.67649594757611E-09"
+        ixz="-0.000137373682701266"
+        iyy="0.000667954025206023"
+        iyz="-4.00030218684643E-08"
+        izz="0.000454311050303624" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://erob_description/meshes/L_elbow.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://erob_description/meshes/L_elbow_low.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L_Joint_4"
+    type="revolute">
+    <origin
+      xyz="-0.0002495 0 -0.11475"
+      rpy="0 0 0" />
+    <parent
+      link="L_shoulder_3" />
+    <child
+      link="L_elbow" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="10"
+      velocity="1" />
+  </joint>
+  <link
+    name="L_wrist_1">
+    <inertial>
+      <origin
+        xyz="0.00201199076396236 5.328605041377E-07 -0.0673661823854693"
+        rpy="0 0 0" />
+      <mass
+        value="0.160243674417616" />
+      <inertia
+        ixx="0.000270966474156959"
+        ixy="-6.76953685935804E-09"
+        ixz="3.15040567153945E-05"
+        iyy="0.000284325340159115"
+        iyz="-6.27256128806016E-09"
+        izz="0.00017185870892482" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://erob_description/meshes/L_wrist_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://erob_description/meshes/L_wrist_1_low.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L_Joint_5"
+    type="revolute">
+    <origin
+      xyz="0.0002495 0 -0.13925"
+      rpy="0 0 0" />
+    <parent
+      link="L_elbow" />
+    <child
+      link="L_wrist_1" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="10"
+      velocity="1" />
+  </joint>
+  <link
+    name="L_wrist_2">
+    <inertial>
+      <origin
+        xyz="0.000131983503963817 2.03138850603246E-06 -0.0435857234048572"
+        rpy="0 0 0" />
+      <mass
+        value="0.149600926579204" />
+      <inertia
+        ixx="0.000210216664542335"
+        ixy="1.89625011418256E-08"
+        ixz="-5.4258220312466E-05"
+        iyy="0.000270899860229319"
+        iyz="3.9500151112895E-08"
+        izz="0.000198572811784655" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://erob_description/meshes/L_wrist_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://erob_description/meshes/L_wrist_2_low.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L_Joint_6"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.12075"
+      rpy="0 0 0" />
+    <parent
+      link="L_wrist_1" />
+    <child
+      link="L_wrist_2" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="10"
+      velocity="1" />
+  </joint>
+  <link
+    name="L_wrist_3">
+    <inertial>
+      <origin
+        xyz="-6.26653728907911E-11 -2.41230507791457E-11 -0.00299999999557188"
+        rpy="0 0 0" />
+      <mass
+        value="0.0171059719987964" />
+      <inertia
+        ixx="4.69273831833649E-06"
+        ixy="1.86115953368793E-23"
+        ixz="2.81982774112557E-17"
+        iyy="4.69273831833649E-06"
+        iyz="5.00531691662904E-18"
+        izz="9.31420175334466E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://erob_description/meshes/L_wrist_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://erob_description/meshes/L_wrist_3_low.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L_Joint_7"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.1105"
+      rpy="0 0 0" />
+    <parent
+      link="L_wrist_2" />
+    <child
+      link="L_wrist_3" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="10"
+      velocity="1" />
+  </joint>
+  <link
+    name="R_shoulder_1">
+    <inertial>
+      <origin
+        xyz="-0.0316495845531163 -0.0876970349353597 -1.03926649175357E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.0583662127067446" />
+      <inertia
+        ixx="8.70454107214253E-05"
+        ixy="4.49418413216039E-07"
+        ixz="-1.30502294074232E-11"
+        iyy="5.83722225883896E-05"
+        iyz="9.05520072453197E-11"
+        izz="3.91504682187357E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://erob_description/meshes/R_shoulder_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://erob_description/meshes/R_shoulder_1_low.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="R_Joint_1"
+    type="revolute">
+    <origin
+      xyz="0 -0.12125 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="R_shoulder_1" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="10"
+      velocity="1" />
+  </joint>
+  <link
+    name="R_shoulder_2">
+    <inertial>
+      <origin
+        xyz="-0.000806846416427642 7.19800235104984E-06 -0.0541256548563906"
+        rpy="0 0 0" />
+      <mass
+        value="0.354884999822818" />
+      <inertia
+        ixx="0.000926057022187813"
+        ixy="9.38288628750575E-09"
+        ixz="-0.000203502931355258"
+        iyy="0.00101553381179031"
+        iyz="1.50040214128084E-08"
+        izz="0.000721601884814612" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://erob_description/meshes/R_shoulder_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://erob_description/meshes/R_shoulder_2_low.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="R_Joint_2"
+    type="revolute">
+    <origin
+      xyz="0 -0.07875 0"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="R_shoulder_1" />
+    <child
+      link="R_shoulder_2" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="10"
+      velocity="1" />
+  </joint>
+  <link
+    name="R_shoulder_3">
+    <inertial>
+      <origin
+        xyz="-0.0281739482816614 3.11148943221706E-07 -0.120975211873102"
+        rpy="0 0 0" />
+      <mass
+        value="0.0451397306440303" />
+      <inertia
+        ixx="5.44670832775175E-05"
+        ixy="4.157485512861E-11"
+        ixz="-2.38081148537813E-08"
+        iyy="2.57895714674199E-05"
+        iyz="-2.12846066444746E-10"
+        izz="3.62117382012045E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://erob_description/meshes/R_shoulder_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://erob_description/meshes/R_shoulder_3_low.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="R_Joint_3"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.14525"
+      rpy="0 0 0" />
+    <parent
+      link="R_shoulder_2" />
+    <child
+      link="R_shoulder_3" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="10"
+      velocity="1" />
+  </joint>
+  <link
+    name="R_elbow">
+    <inertial>
+      <origin
+        xyz="0.00255124883380303 5.18568142449105E-06 -0.0523161872027784"
+        rpy="0 0 0" />
+      <mass
+        value="0.275804426908586" />
+      <inertia
+        ixx="0.000592384378543926"
+        ixy="3.67603954480181E-09"
+        ixz="-0.000137373682699367"
+        iyy="0.000667954025206063"
+        iyz="-4.00038429506942E-08"
+        izz="0.00045431105030028" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://erob_description/meshes/R_elbow.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://erob_description/meshes/R_elbow_low.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="R_Joint_4"
+    type="revolute">
+    <origin
+      xyz="-0.0002495 0 -0.11475"
+      rpy="0 0 0" />
+    <parent
+      link="R_shoulder_3" />
+    <child
+      link="R_elbow" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="10"
+      velocity="1" />
+  </joint>
+  <link
+    name="R_wrist_1">
+    <inertial>
+      <origin
+        xyz="0.00201199088857457 5.33015758530375E-07 -0.0673661823852247"
+        rpy="0 0 0" />
+      <mass
+        value="0.160243674417618" />
+      <inertia
+        ixx="0.00027096647415698"
+        ixy="-6.77031216076525E-09"
+        ixz="3.15040567169794E-05"
+        iyy="0.000284325340158321"
+        iyz="-6.27074200130867E-09"
+        izz="0.0001718587089256" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://erob_description/meshes/R_wrist_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://erob_description/meshes/R_wrist_1_low.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="R_Joint_5"
+    type="revolute">
+    <origin
+      xyz="0.0002495 0 -0.13925"
+      rpy="0 0 0" />
+    <parent
+      link="R_elbow" />
+    <child
+      link="R_wrist_1" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="10"
+      velocity="1" />
+  </joint>
+  <link
+    name="R_wrist_2">
+    <inertial>
+      <origin
+        xyz="0.000131988425529694 2.03501598999845E-06 -0.0435857248604233"
+        rpy="0 0 0" />
+      <mass
+        value="0.149600947448649" />
+      <inertia
+        ixx="0.000210216676861299"
+        ixy="1.89466849564258E-08"
+        ixz="-5.42582200545982E-05"
+        iyy="0.000270899872367118"
+        iyz="3.94998703749154E-08"
+        izz="0.000198572842391198" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://erob_description/meshes/R_wrist_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://erob_description/meshes/R_wrist_2_low.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="R_Joint_6"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.12075"
+      rpy="0 0 0" />
+    <parent
+      link="R_wrist_1" />
+    <child
+      link="R_wrist_2" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="10"
+      velocity="1" />
+  </joint>
+  <link
+    name="R_wrist_3">
+    <inertial>
+      <origin
+        xyz="3.68952207674411E-09 -2.66239252866285E-11 -0.00300000081465168"
+        rpy="0 0 0" />
+      <mass
+        value="0.0171059719987964" />
+      <inertia
+        ixx="4.69273831833649E-06"
+        ixy="2.42639643798554E-23"
+        ixz="-2.86013603914413E-17"
+        iyy="4.69273831833649E-06"
+        iyz="1.0902209969118E-15"
+        izz="9.31420175334466E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://erob_description/meshes/R_wrist_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://erob_description/meshes/R_wrist_3_low.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="R_Joint_7"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.1105"
+      rpy="0 0 0" />
+    <parent
+      link="R_wrist_2" />
+    <child
+      link="R_wrist_3" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="10"
+      velocity="1" />
+  </joint>
+  <link
+    name="neck">
+    <inertial>
+      <origin
+        xyz="-8.52810377871549E-10 0.0113276831075547 0.0286992085248887"
+        rpy="0 0 0" />
+      <mass
+        value="0.0696595700882319" />
+      <inertia
+        ixx="5.01396904582493E-05"
+        ixy="1.21732155996568E-12"
+        ixz="-6.7633344896566E-13"
+        iyy="3.39804568425215E-05"
+        iyz="8.97794535172739E-06"
+        izz="4.3485065566172E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://erob_description/meshes/neck.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://erob_description/meshes/neck_low.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="neck_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 0.0595"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="neck" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.5708"
+      upper="1.5708"
+      effort="10"
+      velocity="1" />
+  </joint>
+  <link
+    name="head">
+    <inertial>
+      <origin
+        xyz="0.0381388417137068 0.00060642251132495 0.00387580812698762"
+        rpy="0 0 0" />
+      <mass
+        value="0.0851674722464805" />
+      <inertia
+        ixx="7.90670828652549E-05"
+        ixy="-1.26302309740786E-05"
+        ixz="8.23134546885499E-07"
+        iyy="2.20260286791449E-05"
+        iyz="6.23762888522944E-07"
+        izz="8.77106038481213E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://erob_description/meshes/head.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://erob_description/meshes/head_low.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="head_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 0.0405"
+      rpy="0 0 0" />
+    <parent
+      link="neck" />
+    <child
+      link="head" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="0"
+      upper="3.14159"
+      effort="10"
+      velocity="1" />
+  </joint>
+</robot>
