@@ -4,4 +4,5 @@
   <xacro:include filename="$(find erob_description)/urdf/erob_real.ros2_control.xacro" />
 
   <xacro:erob_real_ros2_control name="RealLeftArm" />
+  <xacro:erob_mock_ros2_control name="MockRightArmAndHead" />
 </robot>

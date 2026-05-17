@@ -24,4 +24,3 @@ left_arm_controller:
       - position
     state_interfaces:
       - position
-
